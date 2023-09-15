@@ -1,0 +1,17 @@
+<div class="question-container">
+    <p>{{ question.question }}</p>
+
+    <div *ngIf="question.options && question.options.length > 0">
+        <label *ngFor="let option of question.options" class="ans">
+            <input type="radio" name="option" (change)="Submit($event)" [value]="option" /> {{ option }}
+        </label>
+    </div>
+
+    <div *ngIf="question.subQue && question.subQue.length > 0">
+        <div *ngIf="showSubQuestions">
+            <div *ngFor="let subQuestion of subquestioncheck">
+                <app-quiz-question [question]="subQuestion"></app-quiz-question>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.main_quiz_wrapper {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 15px;
+}
+.main_quiz {
+}
+
+.main_heading {
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.main_quiz_wrapper .bg_purple {
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 5px 5px 0 0;
+    background-color: rgb(103, 58, 183);
+}
+
+.main_heading .bg_purple p{
+    visibility: hidden;
+}
+
+.main_quiz h1 {
+    padding: 20px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.submit_btn {
+    background-color: rgb(103, 58, 183);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}

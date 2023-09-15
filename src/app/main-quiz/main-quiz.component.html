@@ -1,0 +1,18 @@
+<div class="main_quiz_wrapper">
+    <div class="main_quiz">
+        <div class="container">
+            <div class="main_heading">
+                <div class="bg_purple">
+                    <span> </span>
+                </div>
+                <h1>Quiz Form</h1>
+            </div>
+            <div *ngFor="let question of questions">
+              <app-quiz-question [question]="question"></app-quiz-question>
+            </div>
+            <div>
+                <button type="submit" value="Submit" class="submit_btn">Submit</button>
+            </div>
+          </div>
+    </div>
+</div>
