@@ -11,9 +11,12 @@ export class QuizQuestionComponent {
   showSubQuestions: boolean = false; 
   Qoption:any
   subquestioncheck: any=[];
+  enterans:string=''
   Submit(Qoption:any) {
-    console.log('',Qoption.target.value)
+   // console.log('',Qoption.target.value)
    this.subquestioncheck=[];
+   //console.log(this.question);
+   if(this.question.hasOwnProperty('subQue')){
     this.question.subQue.filter((que:any)=>{
     if(que.showIf==Qoption.target.value){
       
@@ -22,8 +25,7 @@ export class QuizQuestionComponent {
     }else{
       this.showSubQuestions=false
     }
-  }
-    )
+  }  )}
   }
 
   handleResponse(response: string) {
