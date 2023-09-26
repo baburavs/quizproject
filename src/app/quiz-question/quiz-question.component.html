@@ -2,8 +2,11 @@
     <p>{{ question.question }}</p>
 
     <div *ngIf="question.options && question.options.length > 0 && question.type=='dropdown'">
-        <label *ngFor="let option of question.options" class="ans">
-            <input type="radio" name="option" (change)="Submit($event)" [value]="option" /> {{ option }}
+        <label class="ans">
+            <select (change)="Submit($event)"  class="optionclass">
+                <option value="" disabled selected>Select an option</option>
+                <option *ngFor="let option of question.options" [value]="option">{{ option }}</option>
+            </select>
         </label>
     </div>
     <div *ngIf="question.type=='textinput'">

@@ -12,6 +12,7 @@ export class QuizQuestionComponent {
   Qoption:any
   subquestioncheck: any=[];
   enterans:string=''
+  subquestion:boolean=false
   Submit(Qoption:any) {
    // console.log('',Qoption.target.value)
    this.subquestioncheck=[];
@@ -22,14 +23,14 @@ export class QuizQuestionComponent {
       
       this.subquestioncheck.push(que);
       this.showSubQuestions=true
-    }else{
+    }else if(!this.showSubQuestions){
       this.showSubQuestions=false
     }
   }  )}
   }
 
-  handleResponse(response: string) {
+  // handleResponse(response: string) {
     
-    this.question.userResponse = response;
-  }
+  //   this.question.userResponse = response;
+  // }
 }
